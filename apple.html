@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title> 
+        나의 웹페이지
+    </title>
+    <style>
+        html, body{height: 100%;
+        font-family: Arial, Helvetica, sans-serif;}
+
+        header {
+            background-color: olive;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            padding: 5px;
+            background-color: cadetblue;
+            color: white;
+        }
+
+        section {
+            background-color: white;
+            width: 65%;
+            float: left;
+            text-align: center;
+        }
+
+        aside {
+            background-color: bisque;
+            width: 35%;
+            float: right;
+            text-align: center;
+        }
+
+        article {
+            background-color: white;
+        }
+
+        footer {
+            background-color: lightblue;
+            clear: both;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 4%;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover{
+            text-decoration: underline;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li{
+            display: inline;
+            padding: 20px;
+        }
+
+        article img {
+            float: left;
+        }
+
+    </style>
+
+    
+    </head>
+    
+
+<body>
+    <header>
+    <h1>Veggie Shop</h1>
+    </header>
+    <nav>
+    <ul>
+        <li><a href = "#fruits"> Fresh Fruits </a></li>
+        <li><a href = "#veggies"> Fresh Veggies </a></li>
+        <li><a href="#salads">Fresh Salads</a></li>
+        <li>Seeds and Nuts</li>
+        <li>Gift Box</li>
+        <li><a href="login.html" target="_blank">로그인</a></li>
+        <li><a href="signup.html" target="_blank">회원가입</a></li>
+       
+    </ul>
+    </nav>
+    <section>
+    <article>
+    <h2>탐스럽게 익은 신선한 사과, 한 입의 상쾌함!</h2>
+    <br>
+    
+     <img src="image/apple2.jpg" width="400">
+    
+   
+    <br><br>
+     <form>
+      선호 지역:
+      <input type="radio" name="place" value="안동"> 안동
+      <input type="radio" name="place" value="충주"> 충주<br>
+      <input type="radio" name="place" value="문경"> 문경
+      <input type="radio" name="place" value="청송" checked> 청송
+      <br><br>
+      수량: 
+      <select name="amount" >
+        <option value="1">500g 5000원</option>
+        <option value="2">g 원</option>
+        <option value="3">g 원</option>
+      </select>
+      <br><br>
+      <input type="button" value="장바구니" onclick="alert('장바구니에 추가되었습니다!')">
+      <input type="submit" value="구매하기" >
+     </form>
+
+     <br><br>
+
+    </article>
+    <br><br><br><br>
+    <h3> 지금 막 수확한 달콤하고 아삭한 사과,<br>
+        입안 가득 퍼지는 자연의 맛을 느껴보세요.<br>
+    </section>
+<aside>
+    <div>
+        <h3>광고</h3>
+        <h4>땅에서 식탁까지, 신선함 그대로!</h4>
+        <p>가장 가까운 농장에서 바로 당신의 집으로!</p>
+        
+        <a href="#"><img src="image/delivery.jpg" width="300"></a>
+        <a href="#"><img src="image/farm.jpg" width="300"></a>
+        <p>오늘 수확한 신선한 야채와 채소를 매일 바로 배달해 드립니다.</p>
+        <ul>
+            <li>매일 아침 수확한 채소</li>
+            <li>현지 농장에서 직배송</li>
+            <li>환경을 생각한 로컬 푸드</li>
+            <li>신선도 100% 보장</li>
+            <li>주문 후 바로 배송</li>
+        </ul>
+        <p>귀한 손님을 위한 특별한 식탁, 건강한 일상을 위한 신선함을 누려보세요.</p>
+    </div>
+</aside>
+<footer>
+    <ul>
+        <li>회사소개</li>
+        <li>개인정보보호정책</li>
+        <li>인재채용</li>
+        <li>공지사항</li>
+        <li>QnA</li>
+    </ul>
+</footer>
+</body>
+</html>
