@@ -4,28 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>체질량 계산기</title>
-
+    <link type="text/css" rel="stylesheet" href="css.css">
 </head>
 <body>
+    <header>
+        <h1><a href="index.html"> Veggie Shop </a></h1>
+        </header>
+        <nav>
+        <ul>
+            <li><a href = "index.html#fruits"> Fresh Fruits </a></li>
+            <li><a href = "index.html#veggies"> Fresh Veggies </a></li>
+            <li><a href="index.html#salads">Fresh Salads</a></li>
+            <li><a href="index.html#nuts">Seeds and Nuts</a></li>
+            <li><a href="gift.html" target="_blank"> Gift Box</a></li>
+            <li><a href="BMI.html">BMI 계산기</a></li>
+            <li><a href="login.html" target="_blank">로그인</a></li>
+            <li><a href="signup.html" target="_blank">회원가입</a></li>
+           
+        </ul>
+        </nav>
+    <h1>체질량 지수 계산기</h1>
+    <form name="myform" action="..." method="POST">
+        <br>
+        신장(m): <input id="height">
+        <br>
+        체중(kg): <input id="weight">
+        <br>
+        <input type="button" value="계산" onclick="calc();" />
+        <h3 id="result"></h3>
+        <h3 id="result2"></h3>
+        
+        <button type="button" onclick="sub();">눌러주세요!</button>
+        <h3 id="test"></h3>
+    </form>
 
     <script>
+        function calc() {
+            let weight = parseFloat(document.getElementById("weight").value);
+            let height = parseFloat(document.getElementById("height").value);
+            let BMI;
 
-        document.write("<h1>체질량지수 계산기</h1><br>");
+            if (height > 0) {
+                BMI = weight / (height * height);
+                document.getElementById("result").innerHTML = "BMI: " + BMI.toFixed(2);
 
-        let weight;
-        weight = prompt("체중을 입력하세요!")
-        let height = 1.7;
-        height = prompt("신장(m 단위)를 입력하세요!")
+                if (BMI >= 25) {
+                    document.getElementById("result2").innerHTML = "비만입니다.";
+                } else if (BMI >= 23) {
+                    document.getElementById("result2").innerHTML = "과체중입니다.";
+                } else if (BMI >= 18.5) {
+                    document.getElementById("result2").innerHTML = "정상입니다.";
+                } else {
+                    document.getElementById("result2").innerHTML = "저체중입니다.";
+                }
+            } else {
+                document.getElementById("result").innerHTML = "신장은 0보다 커야 합니다.";
+            }
+        }
 
-        document.write(" 신장: ");
-        document.write(height);
-        document.write(" 체중: ");
-        document.write(weight);
-        document.write(" BMI: ");
-        document.write( weight / (height * height)); //체중 / (신장*신장)
-        //여기까지 실행이 될까용?
-
+        function sub() {
+            const name = prompt('이름을 입력해주세요.');
+            if (name) {
+                document.getElementById("test").innerHTML = "Welcome " + name;
+            }
+        }
     </script>
-
+    <footer>
+        <ul>
+            <li>회사소개</li>
+            <li>개인정보보호정책</li>
+            <li>인재채용</li>
+            <li>공지사항</li>
+            <li>QnA</li>
+        </ul>
+    </footer>
 </body>
 </html>
